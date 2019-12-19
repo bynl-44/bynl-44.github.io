@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ""
+title: on the way
+subtitle: "蹉跎错 消磨过 最是光阴化浮沫"
 description: ""
 keywords:
-author: John Doe
-language: en
+author: bynl-44
+language: zh-CN
 timezone: ""
 
 # URL
@@ -90,10 +90,17 @@ include:
 exclude:
 ignore:
 
+# local search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 1000
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
