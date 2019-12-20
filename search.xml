@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>dva中实现路由跳转的几种方式</title>
+    <url>/2019/12/20/dva%E4%B8%AD%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E8%B7%B3%E8%BD%AC%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/</url>
+    <content><![CDATA[<p>在 dva 中,可以使用多种方式实现路由跳转.</p>
+<ul>
+<li>Link</li>
+<li>history<a id="more"></a>
+
+</li>
+</ul>
+<h1 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h1><hr>
+<p>Link 是 react-router-dom 提供的组件,可以用来实现路由跳转.</p>
+<p>在 dva 中,可以这样使用:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Link &#125; <span class="keyword">from</span> <span class="string">'dva/router'</span>;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">&lt;Link to=<span class="string">'/'</span>&gt;Home&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">...</span></span><br></pre></td></tr></table></figure>
+<p>不能在 <Router> 外使用.</p>
+<h1 id="histroy"><a href="#histroy" class="headerlink" title="histroy"></a>histroy</h1><hr>
+<p>histroy, 它提供 push() 方法来实现路由跳转.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">history.push(<span class="string">'/'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>histroy 可以有多种途径获取.</p>
+<h2 id="props-传递"><a href="#props-传递" class="headerlink" title="props 传递"></a>props 传递</h2><p>Router(histroy) -&gt; page -&gt; component, 可以通过这种传递 props 的方式, 在 component 中获取 history.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> Component = <span class="function">(<span class="params">&#123; histroy &#125;</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;button onClick=&#123; ()=&gt;histroy.push(<span class="string">'/'</span>) &#125;&gt;home&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Page = <span class="function">(<span class="params">&#123; histroy &#125;</span>)=&gt;</span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">Component</span> <span class="attr">histroy</span>=<span class="string">&#123;</span> <span class="attr">histroy</span> &#125; /&gt;</span>;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="xml">const histroy = createHistroy();</span></span><br><span class="line"><span class="xml">const routers = (histroy)=&gt;&#123;</span></span><br><span class="line"><span class="xml">  return (</span></span><br><span class="line">    &lt;Router histroy=&#123; histroy &#125;&gt;</span><br><span class="line">      &lt;Switch&gt;</span><br><span class="line">        &lt;Route path='/' exact component='Page'/&gt;</span><br><span class="line">      &lt;/Switch&gt;</span><br><span class="line">    &lt;/Router&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="withRouter"><a href="#withRouter" class="headerlink" title="withRouter"></a>withRouter</h2><p>withRouter 是 react-router-dom 提供的组件,可以用来获取 history.</p>
+<p>在 dva 中,可以这样使用:</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; withRouter &#125; <span class="keyword">from</span> <span class="string">'dva/router'</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">comst Component = <span class="function">(<span class="params">&#123; histroy &#125;</span>)=&gt;</span>&#123;</span><br><span class="line"> <span class="keyword">return</span> (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;button onClick=&#123; ()=&gt;histroy.push(<span class="string">'/'</span>) &#125;&gt;home&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>div&gt;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> withRouter(Component);</span><br></pre></td></tr></table></figure>
+
+<h2 id="context"><a href="#context" class="headerlink" title="context"></a>context</h2><pre><code class="javascript"><span class="keyword">import</span> PropTypes <span class="keyword">from</span> <span class="string">'prop-types'</span>;
+
+<span class="keyword">const</span> Component = <span class="function">(<span class="params"> props,context</span>)=&gt;</span>{
+  <span class="keyword">return</span> (
+    &lt;div&gt;
+      &lt;button onClick={ ()=&gt;context.router.history.push(<span class="string">'/'</span>) }&gt;home&lt;<span class="regexp">/button&gt;</span>
+<span class="regexp">    &lt;/</span>div&gt;
+  )
+}
+Component.contextTypes = {
+  router: PropTypes.object
+}
+Component.propTypes = {}</code></pre>
+]]></content>
+      <tags>
+        <tag>react dva</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/2019/12/19/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
