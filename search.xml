@@ -11,10 +11,10 @@
 </li>
 </ul>
 <h1 id="Link"><a href="#Link" class="headerlink" title="Link"></a>Link</h1><hr>
-<p>Link 是 react-router-dom 提供的组件,可以用来实现路由跳转.</p>
+<p><code>Link</code> 是 react-router-dom 提供的组件,可以用来实现路由跳转.</p>
 <p>在 dva 中,可以这样使用:</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Link &#125; <span class="keyword">from</span> <span class="string">'dva/router'</span>;</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">&lt;Link to=<span class="string">'/'</span>&gt;Home&lt;<span class="regexp">/Link&gt;</span></span><br><span class="line"><span class="regexp">...</span></span><br></pre></td></tr></table></figure>
-<p>不能在 <Router> 外使用.</p>
+<p>不能在 <code>&lt;Router&gt;</code> 外使用.</p>
 <h1 id="histroy"><a href="#histroy" class="headerlink" title="histroy"></a>histroy</h1><hr>
 <p>histroy, 它提供 push() 方法来实现路由跳转.</p>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">history.push(<span class="string">'/'</span>);</span><br></pre></td></tr></table></figure>
