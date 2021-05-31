@@ -112,3 +112,10 @@ deploy:
   repo:
     github: git@github.com:bynl-44/bynl-44.github.io.git
   branch: gh-pages
+
+# backup
+backup:
+  type: git
+  message: backup my blog of https://bynl-44.github.io
+  repository:
+    origin: git@github.com:bynl-44/bynl-44.github.io.git,backup
