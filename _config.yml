@@ -110,4 +110,4 @@ theme: yun
 deploy:
   type: git
   repo: https://github.com/bynl-44/bynl-44.github.io
-  branch: ['master', 'backup']
+  branch: master
