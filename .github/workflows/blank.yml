@@ -41,4 +41,5 @@ jobs:
           hexo clean
           hexo b
           hexo g
+          cat>CNAME<<uuqk.icu
           hexo d
