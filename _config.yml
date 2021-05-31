@@ -111,7 +111,7 @@ deploy:
   type: git
   repo:
     github: git@github.com:bynl-44/bynl-44.github.io.git
-  branch: gh-pages
+  branch: master
 
 # backup
 backup:
