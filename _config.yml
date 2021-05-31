@@ -108,9 +108,6 @@ theme: yun
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  - type: 'git'
-    repo: https://github.com/bynl-44/bynl-44.github.io
-    branch: master
-  - type: 'git'
-    repo: https://github.com/bynl-44/bynl-44.github.io
-    branch: backup
+  type: git
+  repo: https://github.com/bynl-44/bynl-44.github.io
+  branch: ['master', 'backup']

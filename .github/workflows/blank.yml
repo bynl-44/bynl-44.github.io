@@ -38,5 +38,5 @@ jobs:
       - name: Deploy
         run: |
           hexo clean
-          hexo b
           hexo g
+          hexo d
