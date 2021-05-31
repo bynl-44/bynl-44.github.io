@@ -1,0 +1,246 @@
+# theme color
+colors:
+  primary: '#5a1216'
+  # background color
+  bg: '#EAB5D1'
+  selection_bg: '#5a1216'
+  tag_start_color:
+  tag_end_color:
+
+# tag color
+tags:
+  Vue: '#4fc08d'
+  Hexo: '#0E834D'
+  CSS: '#5298d1'
+  Node.js: '#026E00'
+  Git: '#F14E32'
+  React: '#61dafb'
+  Python: '#3776ab'
+  PHP: '#8892BF'
+  VS Code: '#0066B8'
+  JavaScript: '#F4DF4F'
+  TypeScript: '#317AC6'
+  Laravel: '#F4645F'
+
+# category color
+categories:
+  Go: '#4fc08d'
+
+# favicon icons
+favicon: /favicon.svg
+
+# social icons
+social:
+  - name: RSS
+    # set rss in your root config
+    # https://github.com/hexojs/hexo-generator-feed
+    link: /atom.xml # config.feed.path
+    icon: icon-rss-line
+    color: orange
+  - name: E-Mail
+    link: xyxcnnh@aliyun.com
+    icon: icon-mail-line
+    color: '#8E71C1'
+  - name: GitHub
+    link: https://github.com/bynl-44
+    icon: icon-github-line
+    color: '#181717'
+
+banner:
+  enable: true
+  title:
+    - 北
+    - 苑
+    - 南
+    - 路
+    - 44
+    - 号
+  src: /js/ui/banner.js
+  border: true
+  cloud:
+    enable: true
+    color: 'white'
+  go_down:
+    enable: true
+    icon: icon-arrow-down-s-line
+
+# 公告
+notice:
+  enable: true
+  content: Thank you
+
+# UI mode
+mode: auto
+
+# 图片背景
+bg_image:
+  enable: true
+  url: /images/bg_1.jpg
+  dark: /images/bg_dark_1.png
+  # blur: 10px # 设置背景模糊程度
+  opacity: 0.8
+
+# search bg
+search:
+  modal: false
+  bg_image: /images/bg_2.jpg
+  dark_bg_image: /images/bg_dark_2.jpg
+  # placeholder:
+
+# Avatar settings
+avatar:
+  enable: true
+  url: /images/avatar.jpg
+  rounded: true
+  opacity: 1
+  mickey_mouse: false
+  status:
+    enable: false
+    emoji: 😭
+    message: 人生如戏
+
+scrollreveal:
+  enable: true
+  targets:
+    - .post-card
+    - .post-content img
+
+cursor:
+  enable: true
+  default: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/pointer.cur
+  pointer: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/link.cur
+  text: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/css/md-cursors/text.cur
+
+sidebar:
+  bg_image: /images/bg_side_1.jpg
+  bg_position: bottom 3rem center
+  tagcloud:
+    enable: false
+    amount: 20
+
+menu:
+  home:
+    path: /
+    icon: icon-home-4-line
+  list:
+    - type: archives
+      path: /archives/
+      icon: icon-archive-line
+    - type: categories
+      path: /categories/
+      icon: icon-folder-2-line
+    - type: tags
+      path: /tags/
+      icon: icon-price-tag-3-line
+    # - path: https://www.yunyoujun.cn
+    #   icon: icon-cloud-line
+    #   count: 你猜
+  custom:
+    title: 文档
+    path: https://yun.yunyoujun.cn
+    icon: icon-settings-line
+
+# code highlight
+codeblock:
+  copy_btn: true
+  prismjs:
+    light: default
+    dark: tomorrow
+
+# 文章分享版权
+creative_commons:
+  license: by-nc-sa
+  post: true
+  language: deed.zh
+  clipboard: false
+
+post_card:
+  opacity: 0.7
+
+# 打赏
+reward:
+  enable: false
+# icon: icon-hand-coin-line
+# comment: I'm so cute. Please give me money.
+# # url: https://github.com/YunYouJun/yunyoujun.github.io/issues/96
+# methods:
+#   - name: 支付宝
+#     path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg
+#     color: '#00A3EE'
+#     icon: icon-alipay-line
+#   - name: QQ 支付
+#     path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png
+#     color: '#12B7F5'
+#     icon: icon-qq-line
+#   - name: 微信支付
+#     path: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg
+#     color: '#2DC100'
+#     icon: icon-wechat-pay-line
+
+# footer
+footer:
+  since: 2021
+  icon:
+    name: icon-cloud-line
+    animated: true
+    color: '#0078E7'
+  powered:
+    enable: true
+  live_time:
+    enable: true
+    prefix: 本博客已萌萌哒地运行
+    suffix: (●'◡'●)
+    start_time: '2021-05-01T00:00:00'
+
+say:
+  enable: true
+  api: https://cdn.jsdelivr.net/gh/ElpsyCN/say@gh-pages/sentences.json
+  src: /js/say.js
+  # https://developer.hitokoto.cn/sentence/
+  hitokoto:
+    enable: true
+    api: https://v1.hitokoto.cn
+
+# 默哀日
+mourn:
+  enable: true
+  days:
+    - '4-4'
+    - '9-18'
+
+# tags yun
+wordcloud:
+  enable: true
+
+# valine 评论
+valine:
+  enable: true
+  appId: VMToh52EtpSqu3xroQrvlQIL-gzGzoHsz
+  appKey: 9MNU7Rgp0dGCXAnF8sjmi0Fu # your leancloud application appkey
+  placeholder: Just go go # comment box placeholder
+  avatar: # gravatar style
+  meta:
+    - nick
+    - mail
+    - link
+  pageSize: 10 # pagination size
+  lang: zh-CN
+  # visitor: false
+  highlight: true
+  # recordIP: false
+  # serverURLs:
+  # Emoji See: https://valine.js.org/emoji.html
+  # emojiCDN: //i0.hdslb.com/bfs/emote/
+  # emojiMaps:
+  #   tv_doge: 6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png
+  #   more...
+  # enableQQ: false
+  # requiredFields:
+  #   - nick
+  #   - mail
+
+# search
+# https://github.com/wzpan/hexo-generator-search
+local_search:
+  enable: true
+  src: /js/search/local-search.js
