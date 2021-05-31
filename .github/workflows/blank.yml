@@ -42,4 +42,3 @@ jobs:
           hexo b
           hexo g
           hexo d
-          cd public/ && cat>CNAME<<uuqk.icu
