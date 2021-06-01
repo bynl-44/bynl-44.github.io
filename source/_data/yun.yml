@@ -244,3 +244,9 @@ valine:
 local_search:
   enable: true
   src: /js/search/local-search.js
+
+# 字数统计
+wordcount:
+  enable: true
+  count: true
+  time: true
