@@ -1,5 +1,5 @@
 ---
-title: Go Formatting
+title: Go Formatting格式化
 author: 北苑南路44号
 email: xyxcnnh@aliyun.com
 categories: Go
@@ -20,3 +20,5 @@ description:
 1. 缩进。默认使用 tab，而不是空格。
 2. 每行字符长度。默认不限制每行长度。
 3. 圆括号。相对于 C 或 Java，Go 更少使用圆括号
+
+Go 语言基础讲解：[Go 语言圣经](http://shouce.jb51.net/gopl-zh/index.html) 

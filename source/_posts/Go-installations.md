@@ -1,5 +1,5 @@
 ---
-title: Go installations
+title: Go installations安装
 author: 北苑南路44号
 email: xyxcnnh@aliyun.com
 categories: Go
