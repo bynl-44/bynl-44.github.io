@@ -1,11 +1,12 @@
+language: zh-CN
 # theme color
 colors:
   primary: '#5a1216'
   # background color
   bg: '#EAB5D1'
   selection_bg: '#5a1216'
-  tag_start_color:
-  tag_end_color:
+  # tag_start_color:
+  # tag_end_color:
 
 # tag color
 tags:
@@ -55,7 +56,6 @@ banner:
     - 路
     - 44
     - 号
-  src: /js/ui/banner.js
   border: true
   cloud:
     enable: true
@@ -72,6 +72,21 @@ notice:
 # UI mode
 mode: auto
 
+# font
+font:
+  cdn:
+    enable: true
+    lib:
+      - https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap
+  serif:
+    family: "'Songti SC', 'Noto Serif SC', STZhongsong, STKaiti, KaiTi, Roboto, serif"
+    weight: 900
+  sans_serif:
+    family: "'PingFang SC', 'Microsoft YaHei', Roboto, Arial, sans-serif"
+    weight: 400
+  monospace:
+    family: "'Source Code Pro', 'Courier New', Courier, Consolas, Monaco, monospace"
+
 # 图片背景
 bg_image:
   enable: true
@@ -87,6 +102,21 @@ search:
   dark_bg_image: /images/bg_dark_2.jpg
   # placeholder:
 
+# 烟花配色
+fireworks:
+  enable: true
+  colors:
+    - '102, 167, 221'
+    - '62, 131, 225'
+    - '33, 78, 194'
+
+# ScrollReveal
+scrollreveal:
+  enable: true
+  targets:
+    - .post-card
+    - .markdown-body img
+
 # Avatar settings
 avatar:
   enable: true
@@ -98,12 +128,6 @@ avatar:
     enable: false
     emoji: 😭
     message: 人生如戏
-
-scrollreveal:
-  enable: true
-  targets:
-    - .post-card
-    - .post-content img
 
 cursor:
   enable: true
