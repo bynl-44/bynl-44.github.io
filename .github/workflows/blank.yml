@@ -34,7 +34,7 @@ jobs:
           git config --global user.name "bynl-44"
           npm install hexo-cli -g
           npm install
-          git clone -b dev https://github.com/YunYouJun/hexo-theme-yun themes/yun
+          # git clone -b dev https://github.com/YunYouJun/hexo-theme-yun themes/yun
 
       - name: Deploy
         run: |
