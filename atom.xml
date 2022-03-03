@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>北苑南路44号</title>
+  
+  
+  <link href="https://uuqk.icu/atom.xml" rel="self"/>
+  
+  <link href="https://uuqk.icu/"/>
+  <updated>2022-03-03T10:08:49.100Z</updated>
+  <id>https://uuqk.icu/</id>
+  
+  <author>
+    <name>北苑南路44号</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>URL与资源</title>
+    <link href="https://uuqk.icu/posts/c2f8a261/"/>
+    <id>https://uuqk.icu/posts/c2f8a261/</id>
+    <published>2022-03-03T16:54:23.000Z</published>
+    <updated>2022-03-03T10:08:49.100Z</updated>
+    
+    <content type="html"><![CDATA[<p>URL就是因特网资源的标准化名称。URL指向一条电子信息片段，告诉你它们位于何处，以及如何与之进行交互。</p><ul><li>URL语法，以及各种URL组件的含义及其所做的工作；</li><li>很多Web客户端都支持的URL快捷方式，包括相对URL和自动扩展URL；</li><li>URL编码和字符规则；</li><li>支持各种因特网信息系统的常见URL方案；</li><li>URL的未来，包括URN——这种框架可以在对象从一处搬移到另一处时，保持稳定的访问名称。</li></ul><span id="more"></span>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;URL就是因特网资源的标准化名称。URL指向一条电子信息片段，告诉你它们位于何处，以及如何与之进行交互。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;URL语法，以及各种URL组件的含义及其所做的工作；&lt;/li&gt;
+&lt;li&gt;很多Web客户端都支持的URL快捷方式，包括相对URL和自动扩展URL；&lt;/li&gt;
+&lt;li&gt;URL编码和字符规则；&lt;/li&gt;
+&lt;li&gt;支持各种因特网信息系统的常见URL方案；&lt;/li&gt;
+&lt;li&gt;URL的未来，包括URN——这种框架可以在对象从一处搬移到另一处时，保持稳定的访问名称。&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="笔记" scheme="https://uuqk.icu/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="HTTP" scheme="https://uuqk.icu/tags/HTTP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTTP协议概述</title>
+    <link href="https://uuqk.icu/posts/af3eed3c/"/>
+    <id>https://uuqk.icu/posts/af3eed3c/</id>
+    <published>2022-03-01T17:39:34.000Z</published>
+    <updated>2022-03-03T10:08:49.100Z</updated>
+    
+    <content type="html"><![CDATA[<p>HTTP（超文本传输协议）是在万维网上进行通信时，所使用的协议方案。</p><span id="more"></span><h1 id="HTTP概述"><a href="#HTTP概述" class="headerlink" title="HTTP概述"></a>HTTP概述</h1><p>HTTP是现代全球因特网中使用的公用语言。</p><h2 id="因特网的多媒体信使"><a href="#因特网的多媒体信使" class="headerlink" title="因特网的多媒体信使"></a>因特网的多媒体信使</h2><p>HTTP使用的是可靠的数据传输协议。这样用户在访问信息时，就不用担心其完整性了。</p><h2 id="Web客户端和服务端"><a href="#Web客户端和服务端" class="headerlink" title="Web客户端和服务端"></a>Web客户端和服务端</h2><p>Web内容都存储在Web服务器上。Web服务器所使用的是HTTP协议，因此会被称为HTTP服务器。</p><p>如果HTTP客户端发出请求，服务器就会在HTTP响应中回送所请求的数据。</p><p><strong>HTTP客户端和HTTP服务器共同构成了万维网的基本组件。</strong></p><p>最常见的客户端就是Web浏览器。</p><p>Web 浏览器会向服务器请求HTTP对象，并将这些对象显示在你的屏幕上。</p><h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p>Web服务器是Web资源（Web resource）的宿主。Web资源是Web内容的源头。</p><p>最简单的Web资源就是Web服务器文件系统中的静态文件。</p><p>但资源不一定非得是静态文件。资源还可以是根据需要生成内容的软件程序。</p><p>总之，所有类型的内容来源都是资源。</p><h3 id="媒体类型"><a href="#媒体类型" class="headerlink" title="媒体类型"></a>媒体类型</h3><p>因特网上有数千种不同的数据类型，HTTP仔细地给每种要通过Web传输的对象都打上了名为MIME的类型（MIME type）的数据格式标签。用它来描述并标记多媒体内容。</p><p>Web服务器会为所有HTTP对象数据附加一个MIME类型。当Web浏览器从服务器中取回一个对象时，回去查看相关的MIME类型，看看它是否知道应该如何处理这个对象。</p><p>MIME类型时一种文本标记，表示一种主要的对象类型和一个特定的子类型，中间由一条斜杠来分割。</p><ul><li>HTML格式的文本文档由text/html类型来标记</li><li>普通的ASCII文本文档由text/plain类型来标记</li><li>JPEG格式的图片为image/jpeg类型</li><li>GIF格式的图片为image/gif类型</li><li>Apple的QuickTime电影为video/quicktime类型</li><li>微软的PowerPoint演示文件为application/vnd.ms-powerpoint类型</li></ul><h3 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h3><p>服务器资源名被称为统一资源标识符（Uniform Resource Identifier，URI）。</p><p>给定了URI，HTTP就可以解析出对象。</p><p>URI有两种形式，分别称为URL和URN。</p><h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>统一资源定位符（URL）是资源标识符最常见的形式。</p><p>URL描述了一台特定服务器上某个资源的特定位置。它们可以明确说明如何从一个精确、固定的位置获取资源。</p><p>大部分URL都遵循一种标准格式，这种格式包含三个部分：</p><ul><li>URL的第一部分被称为方案（scheme），说明了访问资源所使用的协议类型。这部分通常是HTTP协议（http://）</li><li>第二部分给出了服务器的因特网地址</li><li>其余部分指定了Web服务器上的某个资源</li></ul><h3 id="URN"><a href="#URN" class="headerlink" title="URN"></a>URN</h3><p>URI的第二种形式就是统一资源名（URN）。</p><p>URN作为特定内容的唯一名称使用的，与目前的资源所在地无关。</p><p>URN仍处于试验阶段，还未大范围使用。</p><h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p>一个HTTP事务由一条（从客户端发往服务器的）请求命令和一个（从服务器发回客户端的）响应结果组成。</p><p>这种通信时通过名为HTTP报文（HTTP message）的格式化数据块进行的。</p><h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>HTTP方法（HTTP method），每条HTTP请求报文都包含一个方法。</p><p>这个方法会告诉服务器要执行什么动作。</p><p>一些常见的HTTP方法：</p><ul><li>GET    从服务器向客户端发送命名资源</li><li>PUT    将来自客户端的数据存储到一个命名的服务器资源中去</li><li>DELETE     从服务器中删除命名资源</li><li>POST   将客户端数据发送到一个服务器网关应用程序</li><li>HEAD   仅发送命名资源响应中的HTTP首部</li></ul><h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h3><p>每条HTTP响应报文返回时都会携带一个状态码。</p><p>状态码是一个三位数字的代码，告知客户端请求是否成功，或者是否需要采取其他动作。</p><p>一些常见的HTTP状态码：</p><ul><li>200    OK，文档正确返回</li><li>302    Redirect（重定向）到其他地方去获取资源</li><li>404    Not Found（没找到）无法找到这个资源</li></ul><p>伴随着每个数字状态码，HTTP还会发送一条解释性的原因短语文本。</p><p>HTTP软件处理下列状态码和原因短语的方式是一样的。</p><h3 id="Web页面中可以包含多个对象"><a href="#Web页面中可以包含多个对象" class="headerlink" title="Web页面中可以包含多个对象"></a>Web页面中可以包含多个对象</h3><p>应用程序完成一项任务时，通常会发布多个HTTP事务。</p><p>一个Web页面通常并不是单个资源，而是一组资源的集合。</p><h2 id="报文"><a href="#报文" class="headerlink" title="报文"></a>报文</h2><p>HTTP报文是由一行一行的简单字符串组成的。</p><p>HTTP报文都是纯文本，不是二进制代码，所以可以很方便地对其进行读写。</p><p>从Web客户端发往Web服务器的HTTP报文称为请求报文（request message）。</p><p>从服务器发往客户端的报文称为响应报文（response message），此外没有其他类型的HTTP报文了。</p><p>HTTP报文包括三个部分：</p><p><strong>起始行</strong></p><p>报文的第一行就是起始行。</p><p>在请求报文中用来说明要做些什么。</p><p>在响应报文中说明出现了什么情况。</p><p><strong>首部字段</strong></p><p>起始行后面有零个或多个首部字段。</p><p>每个首部字段都包含一个名字和一个值，两者之间使用冒号（:）来分割。</p><p>首部以一个空行结束。</p><p><strong>主体</strong></p><p>空行之后就是可选的报文主体。其中包含了所有类型的数据。</p><p>请求主体中包含了要发给Web服务器的数据。</p><p>响应主体中装载了要返回给客户端的数据。</p><p>起始行和首部都是文本形式且都是结构化的，而主体中可以包含文本在内的任意的二进制数据。</p><p><img src="https://raw.githubusercontent.com/bynl-44/imageCloud/master/images/%E6%88%AA%E5%B1%8F2022-03-02%2016.15.32.png" alt="截屏2022-03-02 16.15.32" loading="lazy"></p><p>图中，浏览器发送了一条HTTP请求报文。</p><p>这条请求的起始行中有一个GET命令，且本地资源为/tools.html。</p><p>这条请求说明它使用的是1.0版的HTTP协议。请求报文没有主体，因为从服务器上GET一个简单的文档不需要请求数据。</p><p>服务器会回送一条HTTP响应报文。</p><p>这条响应中包含了HTTP的版本号（HTTP/1.0）、一个成功状态码（200）、一个描述性的原因短语（OK），以及一块响应首部字段，在所有这些内容之后跟着包含了所请求文档的响应主体。</p><p>Content-Length首部说明了响应主体的长度，Content-Type首部说明了文档的MIME类型。</p><h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><p><strong>HTTP是个应用层协议。</strong></p><p>HTTP把联网的细节都交给了通用、可靠的因特网传输协议TCP/IP。</p><h3 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h3><p>TCP提供了：</p><ul><li>无差错的数据传输。</li><li>按序传输（数据流总是会按照发送的顺序到达）。</li><li>未分段的数据流（可以在任意时刻以任意尺寸将数据发送出去）。</li></ul><p>因特网自身就是基于TCP/IP的，TCP/IP是全世界的计算机和网络设备常用的层次化分组交换网络协议集。</p><img src="https://raw.githubusercontent.com/bynl-44/imageCloud/master/images/%E6%88%AA%E5%B1%8F2022-03-02%2016.44.22.png" alt="截屏2022-03-02 16.44.22" / loading="lazy"><p>HTTP协议位于TCP的上层。HTTP使用TCP来传输其报文数据。与之类似，TCP则位于IP的上层。</p><h3 id="连接、IP地址及端口号"><a href="#连接、IP地址及端口号" class="headerlink" title="连接、IP地址及端口号"></a>连接、IP地址及端口号</h3><p>在HTTP客户端向服务器发送报文之前，需要用网际协议（Internet Protocol, IP）地址和端口号在客户端和服务器之间建立一条TCP/IP连接。</p><p>建立一条TCP连接的过程与给公司办公室的某个人打电话的过程类似。首先，要拨打公司的电话号码。这样就能进入正确的机构了。其次，拨打要联系的那个人的分机号。</p><p>在TCP中，你需要知道服务器的IP地址，以及与服务器上运行的特定软件相关的TCP端口号。</p><p>URL存储了资源机器的IP地址和端口号。当URL中没有端口号时，可以假设默认端口号是80。</p><p>基本的浏览器连接处理：</p><ol><li>浏览器从URL中解析出服务器主机名；</li><li>浏览器将服务器主机名转换成服务器的IP地址；</li><li>浏览器将端口号（如果有的话）从URL中解析出来；</li><li>浏览器建立一条与Web服务器的TCP连接；</li><li>浏览器向服务器发送一条HTTP请求报文；</li><li>服务器想浏览器回送一条HTTP响应报文；</li><li>关闭连接，浏览器显示文档。</li></ol><h3 id="一个使用Telnet的实例"><a href="#一个使用Telnet的实例" class="headerlink" title="一个使用Telnet的实例"></a>一个使用Telnet的实例</h3><p>Telnet程序可以将键盘连接到某个目标TCP端口，并将此TCP端口的输出回送到显示屏上。</p><p>Telnet常用于远程终端会话，但它几乎可以连接所有的TCP服务器，包括HTTP服务器。</p><p>Telnet可以很好地模拟HTTP客户端，但不能作为服务器使用。</p><h2 id="协议版本"><a href="#协议版本" class="headerlink" title="协议版本"></a>协议版本</h2><p><strong>HTTP/0.9</strong></p><p>HTTP的1991原型版本称为HTTP/0.9。</p><p>这个协议有很多严重的设计缺陷。HTTP/0.9只支持GET方法，不支持多媒体内容的MIME类型、各种HTTP首部，或者版本号。</p><p>它很快就被HTTP/1.0取代了。</p><p><strong>HTTP/1.0</strong></p><p>1.0是第一个得到广泛使用的HTTP版本。</p><p>HTTP/1.0添加了版本号、各种HTTP首部、一些额外的方法，以及对多媒体对象的处理。</p><p>HTTP/1.0使得包含生动图片的Web页面和交互式表格成为可能，而这些页面和表格促使万维网为人们广泛地接受。</p><p><strong>HTTP/1.0+</strong></p><p>在20世纪90年代中叶，很多流行的Web客户端和服务器都在飞快地向HTTP中添加各种特性，以满足快速扩张且在商业上十分成功的万维网的需要。</p><p>其中很多特性，包括持久的keep-alive连接、虚拟主机支持，以及代理连接支持都被加入到HTTP之中，并成为非官方的事实标准。</p><p>这种非正式的HTTP扩展版本通常称为HTTP/1.0+。</p><p><strong>HTTP/1.1</strong></p><p>HTTP/1.1重点关注的是校正HTTP设计中的结构性缺陷，明确语义，引入重要的性能优化措施，并删除一些不好的特性。</p><p>HTTP/1.1还包含了对20世纪90年代末正在发展中的更复杂的Web应用程序和部署方式的支持。</p><p>HTTP/1.1是当前使用的HTTP版本。</p><p><strong>HTTP/2.0</strong></p><p>HTTP/2.0是HTTP/1.1后继结构的原型建议，它重点关注的是性能的大幅优化，以及更强大的服务逻辑远程执行框架。</p><h2 id="Web的结构组件"><a href="#Web的结构组件" class="headerlink" title="Web的结构组件"></a>Web的结构组件</h2><p>在因特网上，要与很多Web应用程序进行交互。除了重点介绍了两个Web应用程序（Web浏览器和Web服务器）是如何相互发送报文来实现基本事务处理的。我们将列出其他一些比较重要的应用程序：</p><p><strong>代理</strong></p><p>位于客户端和服务器之间的HTTP中间实体。</p><p><strong>缓存</strong></p><p>HTTP的仓库，使常用页面的副本可以保存在离客户端更近的地方。</p><p><strong>网关</strong></p><p>连接其他应用程序的特殊Web服务器。</p><p><strong>隧道</strong></p><p> 对HTTP通信报文进行盲转发的特殊代理。</p><p><strong>Agent代理</strong></p><p>发起自动HTTP请求的半智能Web客户端。</p><h3 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h3><p>HTTP代理服务器是Web安全、应用集成以及性能优化的重要组成模块。</p><p>代理位于客户端和服务器之间，接收所有客户端的HTTP请求，并将这些请求转发给服务器（可能会对请求进行修改之后转发）。对用户来说，这些应用程序就是一个代理，代表用户访问服务器。</p><p>出于安全考虑，通常会将代理作为转发所有Web流量的可信任中间节点使用。代理还可以对请求和响应进行过滤。</p><h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>Web缓存（Web cache）或代理缓存（proxy cache）是一种特殊的HTTP代理服务器，可以将经过代理传送的常用文档复制保存起来。下一个请求同一文档的客户端就可以享受缓存的私有副本所提供的服务了。</p><p>客户端从附近的缓存下载文档会比从远程Web服务器下载快得多。</p><p>HTTP定义了很多功能，使得缓存更加高效，并规范了文档的新鲜度和缓存内容的隐私性。</p><h3 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h3><p>网关（gateway）是一种特殊的服务器，作为其他服务器的中间实体使用。通常用于将HTTP流量转换成其他的协议。</p><p>网关接受请求时就好像自己是资源的源端服务器一样。客户端可能并不知道自己正在与一个网关进行通信。</p><h3 id="隧道"><a href="#隧道" class="headerlink" title="隧道"></a>隧道</h3><p>隧道（tunnel）是建立起来之后，就会在两条连接之间对原始数据进行盲转发的HTTP应用程序。</p><p>HTTP隧道通常用来在一条或多条HTTP连接上转发非HTTP数据，转发时不会窥探数据。</p><p>HTTP隧道的一种常见用途是通过HTTP连接承载加密的安全套接字层（SSL, Secure Sockets Layer）流量，这样SSL流量就可以穿过只允许Web流量通过的防火墙了。</p><h3 id="Agent代理"><a href="#Agent代理" class="headerlink" title="Agent代理"></a>Agent代理</h3><p>用户Agent代理（或者简称为Agent代理）是代表用户发起HTTP请求的客户端程序。</p><p>所有发布Web请求的应用程序都是HTTP Agent代理。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;HTTP（超文本传输协议）是在万维网上进行通信时，所使用的协议方案。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="笔记" scheme="https://uuqk.icu/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="HTTP" scheme="https://uuqk.icu/tags/HTTP/"/>
+    
+    <category term="HTTP概述" scheme="https://uuqk.icu/tags/HTTP%E6%A6%82%E8%BF%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TLS是什么</title>
+    <link href="https://uuqk.icu/posts/b16755e8/"/>
+    <id>https://uuqk.icu/posts/b16755e8/</id>
+    <published>2021-06-21T12:59:20.000Z</published>
+    <updated>2022-03-03T10:08:49.100Z</updated>
+    
+    <content type="html"><![CDATA[<p>TLS是传输层安全性协议，Transport Layer Security的缩写。它是一种安全协议，目的是为互联网通信提供安全及数据完整性保障。</p><p>TLS的前身是SSL，即安全套接层（Secure Sockets Layer）</p><span id="more"></span><p>大纲：</p><ol><li>TLS是什么</li><li>为什么需要TLS</li><li>TLS历史</li><li>TLS的基本原理</li><li>如何使用TLS</li><li>TLS有哪些不足</li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;TLS是传输层安全性协议，Transport Layer Security的缩写。它是一种安全协议，目的是为互联网通信提供安全及数据完整性保障。&lt;/p&gt;
+&lt;p&gt;TLS的前身是SSL，即安全套接层（Secure Sockets Layer）&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="网络协议" scheme="https://uuqk.icu/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/"/>
+    
+    
+    <category term="TLS" scheme="https://uuqk.icu/tags/TLS/"/>
+    
+    <category term="SSL" scheme="https://uuqk.icu/tags/SSL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>端口被占用</title>
+    <link href="https://uuqk.icu/posts/c53abb6/"/>
+    <id>https://uuqk.icu/posts/c53abb6/</id>
+    <published>2021-06-05T12:29:22.000Z</published>
+    <updated>2022-03-03T10:08:49.100Z</updated>
+    
+    <content type="html"><![CDATA[<p>当你兴冲冲地敲完代码，启动服务时，它会告诉你这么一段：</p><pre class="line-numbers language-JSON" data-language="JSON"><code class="language-JSON">&quot;message&quot;:&quot;listen tcp :1323: bind: address already in use&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>端口又被占用了</p><span id="more"></span><h2 id="查看端口"><a href="#查看端口" class="headerlink" title="查看端口"></a>查看端口</h2><p>可以使用 <code>netstat</code> 命令。netstat命令可以显示网络连接，路由表，接口状态，伪装连接，网络链路信息和组播成员组等信息。</p><h2 id="查看指定端口的使用情况"><a href="#查看指定端口的使用情况" class="headerlink" title="查看指定端口的使用情况"></a>查看指定端口的使用情况</h2><p>可以使用<code>lsof</code>命令。</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">lsof</span> -i:1323<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="杀掉进程"><a href="#杀掉进程" class="headerlink" title="杀掉进程"></a>杀掉进程</h2><p>查看进程，找到需要kill的进程</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">ps</span> -ef <span class="token operator">|</span> <span class="token function">grep</span> server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>杀掉进程</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">kill</span> -9 <span class="token operator">&lt;</span>pid<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;当你兴冲冲地敲完代码，启动服务时，它会告诉你这么一段：&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-JSON&quot; data-language=&quot;JSON&quot;&gt;&lt;code class=&quot;language-JSON&quot;&gt;&amp;quot;message&amp;quot;:&amp;quot;listen tcp :1323: bind: address already in use&amp;quot;&lt;span aria-hidden=&quot;true&quot; class=&quot;line-numbers-rows&quot;&gt;&lt;span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;端口又被占用了&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Dev" scheme="https://uuqk.icu/categories/Dev/"/>
+    
+    
+    <category term="端口" scheme="https://uuqk.icu/tags/%E7%AB%AF%E5%8F%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go内置的类型和函数</title>
+    <link href="https://uuqk.icu/posts/f81ca75e/"/>
+    <id>https://uuqk.icu/posts/f81ca75e/</id>
+    <published>2021-06-01T16:37:44.000Z</published>
+    <updated>2022-03-03T10:08:49.100Z</updated>
+    
+    <content type="html"><![CDATA[<p>Go有丰富的数据类型：</p><p>基本类型有：bool、string、int、int8、int16、int32、int64、byte、rune、float32、float64、complex64、complex128</p><p>Go还有：pointer、struct、array、slice、map、Range等复杂数据类型</p><span id="more"></span><h2 id="基本类型"><a href="#基本类型" class="headerlink" title="基本类型"></a>基本类型</h2><table><thead><tr><th>类型</th><th>长度（字节）</th><th>默认值</th><th>说明</th></tr></thead><tbody><tr><td>bool</td><td>1</td><td>false</td><td>仅有<code>true</code>或<code>false</code>两个值</td></tr><tr><td>byte</td><td>1</td><td>0</td><td>uint8的别称</td></tr><tr><td>int</td><td>4</td><td>0</td><td>int32</td></tr><tr><td>uint</td><td>8</td><td>0</td><td>uint32</td></tr><tr><td>int8</td><td>1</td><td>0</td><td>-128 ~ 127</td></tr><tr><td>uint8</td><td>1</td><td>0</td><td>0 ~ 255</td></tr><tr><td>int16</td><td>2</td><td>0</td><td>-32768 ~ 32767</td></tr><tr><td>uint16</td><td>2</td><td>0</td><td>0 ~ 65535</td></tr><tr><td>int32</td><td>4</td><td>0</td><td>-21亿 ~ 21亿</td></tr><tr><td>uint32</td><td>4</td><td>0</td><td>0 ~ 42亿</td></tr><tr><td>int64</td><td>8</td><td>0</td><td></td></tr><tr><td>uint64</td><td>8</td><td>0</td><td></td></tr><tr><td>float32</td><td>4</td><td>0.0</td><td></td></tr><tr><td>float64</td><td>8</td><td>0.0</td><td></td></tr><tr><td>complex64</td><td>8</td><td></td><td>复数，实部和虚部为32位</td></tr><tr><td>complex128</td><td>16</td><td></td><td>复数，实部和虚部为64位</td></tr></tbody></table><h3 id="bool"><a href="#bool" class="headerlink" title="bool"></a>bool</h3><p>Go中不允许将整型强制转换为bool。</p><p>bool也无法参与数值运算。</p><p>bool也无法与其他类型进行转换。</p><h3 id="整型"><a href="#整型" class="headerlink" title="整型"></a>整型</h3><p>支持八进制、六进制，以及科学计数法。</p><p>math标准库定义了各种类型的取值范围。</p><h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><p>两种浮点型数据格式遵循<code>IEEE 754</code>标准。</p><h2 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h2><table><thead><tr><th>类型</th><th>默认值</th><th>说明</th></tr></thead><tbody><tr><td>uintptr</td><td></td><td>存储指针，uint32或uint64整数</td></tr><tr><td>array</td><td></td><td>值类型</td></tr><tr><td>struct</td><td></td><td>值类型</td></tr><tr><td>string</td><td>“”</td><td>UTF-8字符串，值类型</td></tr><tr><td>slice</td><td>nil</td><td>引用类型</td></tr><tr><td>map</td><td>nil</td><td>引用类型</td></tr><tr><td>channel</td><td>nil</td><td>引用类型</td></tr><tr><td>interface</td><td>nil</td><td>接口</td></tr><tr><td>function</td><td>nil</td><td>函数</td></tr></tbody></table>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Go有丰富的数据类型：&lt;/p&gt;
+&lt;p&gt;基本类型有：bool、string、int、int8、int16、int32、int64、byte、rune、float32、float64、complex64、complex128&lt;/p&gt;
+&lt;p&gt;Go还有：pointer、struct、array、slice、map、Range等复杂数据类型&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Go" scheme="https://uuqk.icu/categories/Go/"/>
+    
+    
+    <category term="Go 基础" scheme="https://uuqk.icu/tags/Go-%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo配置主题</title>
+    <link href="https://uuqk.icu/posts/575c230a/"/>
+    <id>https://uuqk.icu/posts/575c230a/</id>
+    <published>2021-06-01T12:35:26.000Z</published>
+    <updated>2022-03-03T10:08:49.100Z</updated>
+    
+    <content type="html"><![CDATA[<p>每次，看到他人的漂亮小站的时候，都忍不住惊呼『哇哦，好漂亮啊！』</p><p>So，直到遇到了<a href="https://yun.yunyoujun.cn/">Hexo-Theme-Yun (yunyoujun.cn)</a>这个主题。我知道，我也可以了。他简直太优秀了。在我看到它的第一眼，就喜欢上他了。哈哈哈~</p><p>感谢yun主题的作者的分享，谢谢你！</p><span id="more"></span><p>再次惊呼，这个主题的文档做的太好了、太省心了。我几乎按照上面的说明，复制粘贴就搞定了。不愧是我，哈哈~</p><p>且慢，你以为我~ 就这？~</p><h2 id="添加backup"><a href="#添加backup" class="headerlink" title="添加backup"></a>添加backup</h2><p>没有备份，总感觉少了点什么，就像有个小偷在偷偷的惦记着你。</p><p>放心~，有他。</p><h3 id="安装hexo-git-backup"><a href="#安装hexo-git-backup" class="headerlink" title="安装hexo-git-backup"></a>安装hexo-git-backup</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 先安装它</span><span class="token function">yarn</span> <span class="token function">add</span> hexo-git-backup<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="然后在blog-config-yml文件中添加："><a href="#然后在blog-config-yml文件中添加：" class="headerlink" title="然后在blog/_config.yml文件中添加："></a>然后在blog/_config.yml文件中添加：</h3><pre class="line-numbers language-yml" data-language="yml"><code class="language-yml"># backupbackup:  type: git  message: backup my blog of &lt;your site&gt;  repository:  # origin: 仓库地址,分支名    origin: git@github.com:xxx&#x2F;xxx.github.io.git,backup<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>之后，使用一条命令就可以备份。</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo b<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>啊~，舒服了。</p><p>这下好了，终于可以愉快的休息了。</p><p>但是，每次写完文章后，hexo clean，hexo b，hexo g，hexo d。</p><p>为什么我如此『深爱』hexo。。。</p><h2 id="添加GitHub-Action"><a href="#添加GitHub-Action" class="headerlink" title="添加GitHub Action"></a>添加GitHub Action</h2><p>我添加个workflow，让他自动跑，岂不完美，哈哈~</p><h3 id="新建文件"><a href="#新建文件" class="headerlink" title="新建文件"></a>新建文件</h3><p>blog/目录下：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">mkdir</span> -p .github/workflow/<span class="token builtin class-name">cd</span> .github/workflow/<span class="token function">touch</span> blank.yml<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h3 id="写入这样的内容"><a href="#写入这样的内容" class="headerlink" title="写入这样的内容"></a>写入这样的内容</h3><p>blank.yml：</p><pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">name: Hexo Deployon:  push:    branches:      - masterjobs:  build:    runs-on: ubuntu-18.04    if: github.event.repository.owner.id &#x3D;&#x3D; github.event.sender.id    steps:      - name: Checkout source        uses: actions&#x2F;checkout@v2        with:          ref: master      - name: Setup Node.js        uses: actions&#x2F;setup-node@v1        with:          node-version: &#39;14&#39;      - name: Setup Hexo        env:          ACTION_DEPLOY_KEY: $&#123;&#123; secrets.HEXO_DEPLOY_KEY &#125;&#125; # 请注意这里，有个KEY        run: |          mkdir -p ~&#x2F;.ssh&#x2F;          echo &quot;$ACTION_DEPLOY_KEY&quot; &gt; ~&#x2F;.ssh&#x2F;id_rsa          chmod 700 ~&#x2F;.ssh          chmod 600 ~&#x2F;.ssh&#x2F;id_rsa          ssh-keyscan github.com &gt;&gt; ~&#x2F;.ssh&#x2F;known_hosts          git config --global user.email &quot;your email&quot;# 这里是GitHub登录邮箱地址          git config --global user.name &quot;your name&quot; # 这里是GitHub登录昵称          npm install hexo-cli -g          npm install          git clone -b dev https:&#x2F;&#x2F;github.com&#x2F;YunYouJun&#x2F;hexo-theme-yun themes&#x2F;yun # 这里是最新的yun主题，直接clone过来      - name: Deploy        run: |          hexo clean          hexo b          hexo g          hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>接下来，搞定<code>HEXO_DEPLOY_KEY</code>（这只是个名字）：</p><h3 id="生成新SSH密钥"><a href="#生成新SSH密钥" class="headerlink" title="生成新SSH密钥"></a>生成新SSH密钥</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen -t ed25519 -C <span class="token string">"your_email@example.com"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>复制SSH公钥</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">pdcopy <span class="token operator">&lt;</span> ~/.ssh/id_ed25519.pub<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="在GitHub仓库中完成设置"><a href="#在GitHub仓库中完成设置" class="headerlink" title="在GitHub仓库中完成设置"></a>在GitHub仓库中完成设置</h3><p>进入GitHub仓库的Settings -&gt; Secrets，按钮 <code>new repository secret</code>，设置『HEXO_DEPLOY_KEY』。</p><p>Value，粘贴</p><p>Name，HEXO_DEPLOY_KEY</p><p>Add secret</p><p>轻松搞定。这样push之后，就会自动执行任务了。</p><p>恩~不错，来自懒癌的肯定。</p><h2 id="添加CNAME"><a href="#添加CNAME" class="headerlink" title="添加CNAME"></a>添加CNAME</h2><p>嘿嘿嘿，搞了个域名，又有新玩具了。</p><p>如果在Settings里手动设置域名，GitHub会自动在仓库根目录添加CNAME文件，里面的内容就是域名。</p><p>简单~ 同样在GitHub仓库Settings -&gt; Pages中，把域名配置上，OK~ 搞定。打开浏览器，输入域名，完美~ 哈哈~</p><p>嘿嘿~ 我改了个逗号，push~~ 打开浏览器</p><p>what？</p><p>404~？</p><p>打开Settings -&gt; Pages，嗯？~设置的域名呢？不会每次跑自动任务后，<a href="">都要来设置吧</a></p><p>但是，blog当前的分支，是hexo生成的内容。</p><p>所以</p><p><strong>把CNAME移到source目录</strong></p><p>这样，自动任务就会自动生成CNAME文件了</p><p>大功告成！</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;每次，看到他人的漂亮小站的时候，都忍不住惊呼『哇哦，好漂亮啊！』&lt;/p&gt;
+&lt;p&gt;So，直到遇到了&lt;a href=&quot;https://yun.yunyoujun.cn/&quot;&gt;Hexo-Theme-Yun (yunyoujun.cn)&lt;/a&gt;这个主题。我知道，我也可以了。他简直太优秀了。在我看到它的第一眼，就喜欢上他了。哈哈哈~&lt;/p&gt;
+&lt;p&gt;感谢yun主题的作者的分享，谢谢你！&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://uuqk.icu/categories/Hexo/"/>
+    
+    
+    <category term="Hexo theme" scheme="https://uuqk.icu/tags/Hexo-theme/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go Commentary注释</title>
+    <link href="https://uuqk.icu/posts/a3abd4b3/"/>
+    <id>https://uuqk.icu/posts/a3abd4b3/</id>
+    <published>2021-05-30T17:34:39.000Z</published>
+    <updated>2022-03-03T10:08:49.100Z</updated>
+    
+    <content type="html"><![CDATA[<p>Go支持C语言风格的<code>/* */</code>块注释，也支持C++风格的<code>//</code>行注释。</p><p>行注释更通用，块注释主要用于包的详细说明或屏蔽大块代码。</p><span id="more"></span><h2 id="注释不需要多余的排版"><a href="#注释不需要多余的排版" class="headerlink" title="注释不需要多余的排版"></a>注释不需要多余的排版</h2><p>如<code>*</code>：</p><pre class="line-numbers language-go" data-language="go"><code class="language-go"><span class="token comment">/* * 不需要多余的*号 这样就OK */</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="注释不要靠空格对齐"><a href="#注释不要靠空格对齐" class="headerlink" title="注释不要靠空格对齐"></a>注释不要靠空格对齐</h2><p>godoc会有类似gofmt这样的格式化功能</p><h2 id="避免使用其他标签、注解文本"><a href="#避免使用其他标签、注解文本" class="headerlink" title="避免使用其他标签、注解文本"></a>避免使用其他标签、注解文本</h2><p>例如HTML，会照原样显示，所以应避免使用</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Go支持C语言风格的&lt;code&gt;/* */&lt;/code&gt;块注释，也支持C++风格的&lt;code&gt;//&lt;/code&gt;行注释。&lt;/p&gt;
+&lt;p&gt;行注释更通用，块注释主要用于包的详细说明或屏蔽大块代码。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Go" scheme="https://uuqk.icu/categories/Go/"/>
+    
+    
+    <category term="Go 基础" scheme="https://uuqk.icu/tags/Go-%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go Formatting格式化</title>
+    <link href="https://uuqk.icu/posts/43b3c0c3/"/>
+    <id>https://uuqk.icu/posts/43b3c0c3/</id>
+    <published>2021-05-29T15:40:31.000Z</published>
+    <updated>2022-03-03T10:08:49.100Z</updated>
+    
+    <content type="html"><![CDATA[<p>格式问题有很多争议，但影响很小。人可是适应不同的风格，但如果每个人都遵循相同的风格，就可以花更多的时间在其他更有意义的事情上。</p><p><code>go fmt</code> 是 Go 官方提供的统一的格式化代码风格工具。</p><span id="more"></span><p>格式化的一些细节：</p><ol><li>缩进。默认使用 tab，而不是空格。</li><li>每行字符长度。默认不限制每行长度。</li><li>圆括号。相对于 C 或 Java，Go 更少使用圆括号</li></ol><p>Go 语言基础讲解：<a href="http://shouce.jb51.net/gopl-zh/index.html">Go 语言圣经</a> </p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;格式问题有很多争议，但影响很小。人可是适应不同的风格，但如果每个人都遵循相同的风格，就可以花更多的时间在其他更有意义的事情上。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;go fmt&lt;/code&gt; 是 Go 官方提供的统一的格式化代码风格工具。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Go" scheme="https://uuqk.icu/categories/Go/"/>
+    
+    
+    <category term="Go 基础" scheme="https://uuqk.icu/tags/Go-%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go installations安装</title>
+    <link href="https://uuqk.icu/posts/4cee0b85/"/>
+    <id>https://uuqk.icu/posts/4cee0b85/</id>
+    <published>2021-05-29T13:00:18.000Z</published>
+    <updated>2022-03-03T10:08:49.100Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li>Download and install – 快速安装</li><li>Managing Go installations – 怎样使用第三方工具管理多个 Go 版本</li><li>Installing Go from source – 怎样通过源码安装</li></ol><span id="more"></span><h2 id="Download-and-install"><a href="#Download-and-install" class="headerlink" title="Download and install"></a>Download and install</h2><h3 id="1-Go-download"><a href="#1-Go-download" class="headerlink" title="1. Go download."></a>1. Go download.</h3><p>Downloads: <a href="https://golang.org/dl/">https://golang.org/dl/</a></p><h3 id="2-Go-install"><a href="#2-Go-install" class="headerlink" title="2. Go install"></a>2. Go install</h3><h4 id="macOS"><a href="#macOS" class="headerlink" title="macOS"></a>macOS</h4><ol><li>下载 <code>.pkg</code> 安装文件，并运行</li><li>验证安装是否成功</li></ol><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">go version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Go 会被安装到目录<code>/usr/local/go</code> 中。安装过程会自动将<code>/usr/local/go/bin</code> 目录添加到 <code>PATH</code> 中，需要重启 Terminal 来使其生效。</p><h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><ol><li>下载 <code>.msi</code> 文件并运行</li><li>打开 cmd 窗口，验证安装是否成功</li></ol><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">go version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Go 会默认安装到 <code>Program Files</code> 或 <code>Program Files(x86)</code> 目录中。安装过程中也会自动配置环境变量。</p><h4 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h4><ol><li>将 <code>.tar.gz</code> 文件解压到 <code>/usr/local/go</code> 目录中</li></ol><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">rm</span> -rf /usr/local/go <span class="token operator">&amp;&amp;</span> <span class="token function">tar</span> -C /usr/local/ -xzf go1.16.4.linux-amd64.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol start="2"><li>Add <code>/usr/local/go/bin</code> to <code>PATH</code></li></ol><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span>:/usr/local/go/bin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol start="3"><li>Verify that you’ve installed Go</li></ol><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">go version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h2 id="Managing-Go-installations"><a href="#Managing-Go-installations" class="headerlink" title="Managing Go installations"></a>Managing Go installations</h2><ol><li>go get</li><li>Homebrew</li><li>apt-get</li><li>wget</li></ol><h3 id="go-get"><a href="#go-get" class="headerlink" title="go get"></a>go get</h3><p><em>Note：</em> 需要先安装 git 工具</p><p>使用 <code>go get</code> 安装 Go 的指定版本。例如：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">go get golang.ort/dl/go1.10.7go1.10.7 download<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p>要使用指定版本，可以在 go 后面跟上版本号：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">go1.10.7 version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>Uninstalling Go</strong></p><p>macOS/Linux/FreeBSD:</p><ol><li>删除 Go 文件夹。go 一般在目录/usr/local/go 中</li><li>删除 Go PATH。编辑/etc/profile 文件或$HOME/.profile 文件。macOS 还需要删除/etc/paths.d/go 文件</li></ol><p>Windows：</p><p>在 Windows 控制面板中删除 Go。</p><p>或使用命令：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">msiexec /x go<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span>version<span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>.windows-<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span>cpu-arch<span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>.msi /q<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h3><p>macOS 还可以使用 Homebrew 安装 Go：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">brew update <span class="token operator">&amp;&amp;</span> brew upgradebrew <span class="token function">install</span> gobrew <span class="token function">install</span> <span class="token function">git</span>brew <span class="token function">install</span> mercurial<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="GVM"><a href="#GVM" class="headerlink" title="GVM"></a>GVM</h3><p>gvm 是第三方开发的 Go 多版本管理工具</p><p><strong>安装 gvm</strong>：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">bash</span> <span class="token operator">&lt;</span> <span class="token operator">&lt;</span><span class="token punctuation">(</span><span class="token function">curl</span> -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><strong>使用 gvm 安装 Go：</strong></p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">gvm <span class="token function">install</span> go1.14.7gvm use go1.14.7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="apt-get"><a href="#apt-get" class="headerlink" title="apt-get"></a>apt-get</h3><p>部分 Linux 用户可以使用 apt-get 安装 Go：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> python-software-properties<span class="token function">sudo</span> add-apt-repository ppa:gophers/go<span class="token function">sudo</span> <span class="token function">apt-get</span> update<span class="token function">sudo</span> <span class="token function">apt-get</span> <span class="token function">install</span> golang-stable git-core mercurial<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h3 id="wget"><a href="#wget" class="headerlink" title="wget"></a>wget</h3><p>使用 wget 工具安装 Go：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">wget</span> https://storage.googleapis.com/golang/go1.14.7.linux-amd64.tar.gz<span class="token comment"># 或 wget https://dl.google.com/go/go1.14.7.linux-amd64.tar.gz</span><span class="token function">sudo</span> <span class="token function">tar</span> -xzf go1.14.7.linux-amd64.tar.gz -C /usr/local<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>配置环境变量：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">GOROOT</span><span class="token operator">=</span>/usr/local/go<span class="token builtin class-name">export</span> <span class="token assign-left variable">GOBIN</span><span class="token operator">=</span><span class="token variable">$GOROOT</span>/bin<span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token environment constant">$PATH</span><span class="token builtin class-name">:</span><span class="token variable">$GOBIN</span><span class="token builtin class-name">export</span> <span class="token assign-left variable">GOPATH</span><span class="token operator">=</span><span class="token environment constant">$HOME</span>/gopath <span class="token comment"># 可选配置</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><h2 id="Installing-Go-from-source"><a href="#Installing-Go-from-source" class="headerlink" title="Installing Go from source"></a>Installing Go from source</h2><p>官方指南：<a href="https://docs.studygolang.com/doc/install-source.html">https://docs.studygolang.com/doc/install-source.html</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;Download and install – 快速安装&lt;/li&gt;
+&lt;li&gt;Managing Go installations – 怎样使用第三方工具管理多个 Go 版本&lt;/li&gt;
+&lt;li&gt;Installing Go from source – 怎样通过源码安装&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="Go" scheme="https://uuqk.icu/categories/Go/"/>
+    
+    
+    <category term="Go 基础" scheme="https://uuqk.icu/tags/Go-%E5%9F%BA%E7%A1%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://uuqk.icu/posts/16107/"/>
+    <id>https://uuqk.icu/posts/16107/</id>
+    <published>2021-05-29T12:00:18.000Z</published>
+    <updated>2022-03-03T10:08:49.100Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><span id="more"></span><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+</feed>

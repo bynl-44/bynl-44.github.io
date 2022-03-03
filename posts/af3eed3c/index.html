@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#5a1216"><meta name="author" content="北苑南路44号"><meta name="copyright" content="北苑南路44号"><meta name="generator" content="Hexo 5.4.1"><meta name="theme" content="hexo-theme-yun"><title>HTTP协议概述 | 北苑南路44号</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&amp;display=swap" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/star-markdown-css@0.2.4/dist/yun/yun-markdown.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-theme-vars/base.css"><script src="//at.alicdn.com/t/font_1140697_dxory92pb0h.js" async></script><script src="https://cdn.jsdelivr.net/npm/@unocss/runtime/mini.global.js"></script><script src="https://cdn.jsdelivr.net/npm/scrollreveal/dist/scrollreveal.min.js" defer></script><script>function initScrollReveal() {
+  [".post-card",".markdown-body img"].forEach((target)=> {
+    ScrollReveal().reveal(target);
+  })
+}
+document.addEventListener("DOMContentLoaded", initScrollReveal);
+document.addEventListener("pjax:success", initScrollReveal);
+</script><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="mask-icon" href="/favicon.svg" color="#5a1216"><link rel="preload" href="/css/hexo-theme-yun.css" as="style"><link rel="prefetch" href="/js/sidebar.js" as="script"><link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin><script id="yun-config">
+    window.Yun = {}
+    window.CONFIG = {"hostname":"uuqk.icu","root":"/","title":["北","苑","南","路",44,"号"],"version":"1.8.10","mode":"auto","copycode":true,"page":{"isPost":true},"i18n":{"placeholder":"搜索...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）"},"anonymous_image":"https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg","say":{"api":"https://v1.hitokoto.cn","hitokoto":true},"local_search":{"path":"/search.xml"},"fireworks":{"colors":["102, 167, 221","62, 131, 225","33, 78, 194"]},"vendors":{"darken":"https://cdn.jsdelivr.net/npm/darken@1.5.0"}};
+  </script><link rel="stylesheet" href="/css/hexo-theme-yun.css"><script src="/js/hexo-theme-yun.js" type="module"></script><link rel="alternate" href="/atom.xml" title="北苑南路44号" type="application/atom+xml"><meta name="description" content="HTTP（超文本传输协议）是在万维网上进行通信时，所使用的协议方案。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP协议概述">
+<meta property="og:url" content="https://uuqk.icu/posts/af3eed3c/index.html">
+<meta property="og:site_name" content="北苑南路44号">
+<meta property="og:description" content="HTTP（超文本传输协议）是在万维网上进行通信时，所使用的协议方案。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/bynl-44/imageCloud/master/images/%E6%88%AA%E5%B1%8F2022-03-02%2016.15.32.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/bynl-44/imageCloud/master/images/%E6%88%AA%E5%B1%8F2022-03-02%2016.44.22.png">
+<meta property="article:published_time" content="2022-03-01T17:39:34.000Z">
+<meta property="article:modified_time" content="2022-03-03T10:08:49.100Z">
+<meta property="article:author" content="北苑南路44号">
+<meta property="article:tag" content="HTTP">
+<meta property="article:tag" content="HTTP概述">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/bynl-44/imageCloud/master/images/%E6%88%AA%E5%B1%8F2022-03-02%2016.15.32.png"><script>(function() {
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  const setting = localStorage.getItem('darken-mode') || 'auto'
+  if (setting === 'dark' || (prefersDark && setting !== 'light'))
+    document.documentElement.classList.toggle('dark', true)
+})()</script></head><body><script defer src="https://cdn.jsdelivr.net/npm/animejs@latest"></script><script defer src="/js/ui/fireworks.js" type="module"></script><canvas class="fireworks"></canvas><div class="container"><a class="sidebar-toggle hty-icon-button" id="menu-btn"><div class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></div></a><div class="sidebar-toggle sidebar-overlay"></div><aside class="sidebar"><script src="/js/sidebar.js" type="module"></script><ul class="sidebar-nav"><li class="sidebar-nav-item sidebar-nav-toc hty-icon-button sidebar-nav-active" data-target="post-toc-wrap" title="文章目录"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-list-ordered"></use></svg></li><li class="sidebar-nav-item sidebar-nav-overview hty-icon-button" data-target="site-overview-wrap" title="站点概览"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-passport-line"></use></svg></li></ul><div class="sidebar-panel" id="site-overview-wrap"><div class="site-info fix-top"><a class="site-author-avatar" href="/about/" title="北苑南路44号"><img width="96" loading="lazy" src="/images/avatar.jpg" alt="北苑南路44号"></a><div class="site-author-name"><a href="/about/">北苑南路44号</a></div><span class="site-name">北苑南路44号</span><sub class="site-subtitle"></sub><div class="site-desciption"></div></div><nav class="site-state"><a class="site-state-item hty-icon-button icon-home" href="/" title="首页"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-home-4-line"></use></svg></span></a><div class="site-state-item"><a href="/archives/" title="归档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-archive-line"></use></svg></span><span class="site-state-item-count">10</span></a></div><div class="site-state-item"><a href="/categories/" title="分类"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-2-line"></use></svg></span><span class="site-state-item-count">5</span></a></div><div class="site-state-item"><a href="/tags/" title="标签"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="site-state-item-count">7</span></a></div><a class="site-state-item hty-icon-button" target="_blank" rel="noopener" href="https://yun.yunyoujun.cn" title="文档"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-settings-line"></use></svg></span></a></nav><hr style="margin-bottom:0.5rem"><div class="links-of-author"><a class="links-of-author-item hty-icon-button" rel="noopener" href="/atom.xml" title="RSS" target="_blank" style="color:orange"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-rss-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="xyxcnnh@aliyun.com" title="E-Mail" target="_blank" style="color:#8E71C1"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-mail-line"></use></svg></a><a class="links-of-author-item hty-icon-button" rel="noopener" href="https://github.com/bynl-44" title="GitHub" target="_blank" style="color:#181717"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-github-line"></use></svg></a></div><hr style="margin:0.5rem 1rem"><div class="links"><a class="links-item hty-icon-button" href="/links/" title="我的小伙伴们" style="color:dodgerblue"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-genderless-line"></use></svg></a></div><br><a class="links-item hty-icon-button" id="toggle-mode-btn" href="javascript:;" title="Mode" style="color: #f1cb64"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-contrast-2-line"></use></svg></a></div><div class="sidebar-panel sidebar-panel-active" id="post-toc-wrap"><div class="post-toc"><div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#HTTP%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">HTTP概述</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%A0%E7%89%B9%E7%BD%91%E7%9A%84%E5%A4%9A%E5%AA%92%E4%BD%93%E4%BF%A1%E4%BD%BF"><span class="toc-number">1.1.</span> <span class="toc-text">因特网的多媒体信使</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">1.2.</span> <span class="toc-text">Web客户端和服务端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%84%E6%BA%90"><span class="toc-number">1.3.</span> <span class="toc-text">资源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AA%92%E4%BD%93%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.3.1.</span> <span class="toc-text">媒体类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#URI"><span class="toc-number">1.3.2.</span> <span class="toc-text">URI</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#URL"><span class="toc-number">1.3.3.</span> <span class="toc-text">URL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#URN"><span class="toc-number">1.3.4.</span> <span class="toc-text">URN</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1"><span class="toc-number">1.4.</span> <span class="toc-text">事务</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.1.</span> <span class="toc-text">方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8A%B6%E6%80%81%E7%A0%81"><span class="toc-number">1.4.2.</span> <span class="toc-text">状态码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Web%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%8F%AF%E4%BB%A5%E5%8C%85%E5%90%AB%E5%A4%9A%E4%B8%AA%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.4.3.</span> <span class="toc-text">Web页面中可以包含多个对象</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E6%96%87"><span class="toc-number">1.5.</span> <span class="toc-text">报文</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5"><span class="toc-number">1.6.</span> <span class="toc-text">连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#TCP-IP"><span class="toc-number">1.6.1.</span> <span class="toc-text">TCP&#x2F;IP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E3%80%81IP%E5%9C%B0%E5%9D%80%E5%8F%8A%E7%AB%AF%E5%8F%A3%E5%8F%B7"><span class="toc-number">1.6.2.</span> <span class="toc-text">连接、IP地址及端口号</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%B8%AA%E4%BD%BF%E7%94%A8Telnet%E7%9A%84%E5%AE%9E%E4%BE%8B"><span class="toc-number">1.6.3.</span> <span class="toc-text">一个使用Telnet的实例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%8F%E8%AE%AE%E7%89%88%E6%9C%AC"><span class="toc-number">1.7.</span> <span class="toc-text">协议版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Web%E7%9A%84%E7%BB%93%E6%9E%84%E7%BB%84%E4%BB%B6"><span class="toc-number">1.8.</span> <span class="toc-text">Web的结构组件</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%90%86"><span class="toc-number">1.8.1.</span> <span class="toc-text">代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%93%E5%AD%98"><span class="toc-number">1.8.2.</span> <span class="toc-text">缓存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BD%91%E5%85%B3"><span class="toc-number">1.8.3.</span> <span class="toc-text">网关</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%A7%E9%81%93"><span class="toc-number">1.8.4.</span> <span class="toc-text">隧道</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Agent%E4%BB%A3%E7%90%86"><span class="toc-number">1.8.5.</span> <span class="toc-text">Agent代理</span></a></li></ol></li></ol></li></ol></div></div></div></aside><main class="sidebar-translate" id="content"><div id="post"><article class="hty-card post-block" itemscope itemtype="https://schema.org/Article" style="--smc-primary:#5a1216;"><link itemprop="mainEntityOfPage" href="https://uuqk.icu/posts/af3eed3c/"><span hidden itemprop="author" itemscope itemtype="https://schema.org/Person"><meta itemprop="name" content="北苑南路44号"><meta itemprop="description"></span><span hidden itemprop="publisher" itemscope itemtype="https://schema.org/Organization"><meta itemprop="name" content="北苑南路44号"></span><header class="post-header"><h1 class="post-title" itemprop="name headline">HTTP协议概述</h1><div class="post-meta"><div class="post-time" style="display:block"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-line"></use></svg></span> <time title="创建时间：2022-03-01 17:39:34" itemprop="dateCreated datePublished" datetime="2022-03-01T17:39:34+00:00">2022-03-01</time><span class="post-meta-divider">-</span><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-calendar-2-line"></use></svg></span> <time title="修改时间：2022-03-03 10:08:49" itemprop="dateModified" datetime="2022-03-03T10:08:49+00:00">2022-03-03</time></div><span class="post-count"><span class="post-symbolcount"><span class="post-meta-item-icon" title="本文字数"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-file-word-line"></use></svg></span> <span title="本文字数">3.5k</span><span class="post-meta-divider">-</span><span class="post-meta-item-icon" title="阅读时长"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-timer-line"></use></svg></span> <span title="阅读时长">12m</span></span></span><div class="post-classify"><span class="post-category"> <span class="post-meta-item-icon" style="margin-right:3px;"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-folder-line"></use></svg></span><span itemprop="about" itemscope itemtype="https://schema.org/Thing"><a class="category-item" href="/categories/%E7%AC%94%E8%AE%B0/" style="--text-color:dimgray" itemprop="url" rel="index"><span itemprop="text">笔记</span></a></span></span><span class="post-tag"><span class="post-meta-divider">-</span><a class="tag-item" href="/tags/HTTP/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">HTTP</span></a><a class="tag-item" href="/tags/HTTP%E6%A6%82%E8%BF%B0/" style="--text-color:var(--hty-text-color)"><span class="post-meta-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-price-tag-3-line"></use></svg></span><span class="tag-name">HTTP概述</span></a></span></div><div class="post-author"><div class="author-avatar"><img src="https://www.gravatar.com/avatar/97d28ac65b6731679c66b752c98fd781?s=20&amp;d=https%3A%2F%2Fcdn.jsdelivr.net%2Fgh%2FYunYouJun%2Fcdn%2Fimg%2Favatar%2Fnone.jpg"></div><span class="author-name">北苑南路44号</span></div></div></header><section class="post-body" itemprop="articleBody"><div class="post-content markdown-body"><p>HTTP（超文本传输协议）是在万维网上进行通信时，所使用的协议方案。</p>
+<span id="more"></span>
+
+<h1 id="HTTP概述"><a href="#HTTP概述" class="headerlink" title="HTTP概述"></a>HTTP概述</h1><p>HTTP是现代全球因特网中使用的公用语言。</p>
+<h2 id="因特网的多媒体信使"><a href="#因特网的多媒体信使" class="headerlink" title="因特网的多媒体信使"></a>因特网的多媒体信使</h2><p>HTTP使用的是可靠的数据传输协议。这样用户在访问信息时，就不用担心其完整性了。</p>
+<h2 id="Web客户端和服务端"><a href="#Web客户端和服务端" class="headerlink" title="Web客户端和服务端"></a>Web客户端和服务端</h2><p>Web内容都存储在Web服务器上。Web服务器所使用的是HTTP协议，因此会被称为HTTP服务器。</p>
+<p>如果HTTP客户端发出请求，服务器就会在HTTP响应中回送所请求的数据。</p>
+<p><strong>HTTP客户端和HTTP服务器共同构成了万维网的基本组件。</strong></p>
+<p>最常见的客户端就是Web浏览器。</p>
+<p>Web 浏览器会向服务器请求HTTP对象，并将这些对象显示在你的屏幕上。</p>
+<h2 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h2><p>Web服务器是Web资源（Web resource）的宿主。Web资源是Web内容的源头。</p>
+<p>最简单的Web资源就是Web服务器文件系统中的静态文件。</p>
+<p>但资源不一定非得是静态文件。资源还可以是根据需要生成内容的软件程序。</p>
+<p>总之，所有类型的内容来源都是资源。</p>
+<h3 id="媒体类型"><a href="#媒体类型" class="headerlink" title="媒体类型"></a>媒体类型</h3><p>因特网上有数千种不同的数据类型，HTTP仔细地给每种要通过Web传输的对象都打上了名为MIME的类型（MIME type）的数据格式标签。用它来描述并标记多媒体内容。</p>
+<p>Web服务器会为所有HTTP对象数据附加一个MIME类型。当Web浏览器从服务器中取回一个对象时，回去查看相关的MIME类型，看看它是否知道应该如何处理这个对象。</p>
+<p>MIME类型时一种文本标记，表示一种主要的对象类型和一个特定的子类型，中间由一条斜杠来分割。</p>
+<ul>
+<li>HTML格式的文本文档由text/html类型来标记</li>
+<li>普通的ASCII文本文档由text/plain类型来标记</li>
+<li>JPEG格式的图片为image/jpeg类型</li>
+<li>GIF格式的图片为image/gif类型</li>
+<li>Apple的QuickTime电影为video/quicktime类型</li>
+<li>微软的PowerPoint演示文件为application/vnd.ms-powerpoint类型</li>
+</ul>
+<h3 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h3><p>服务器资源名被称为统一资源标识符（Uniform Resource Identifier，URI）。</p>
+<p>给定了URI，HTTP就可以解析出对象。</p>
+<p>URI有两种形式，分别称为URL和URN。</p>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3><p>统一资源定位符（URL）是资源标识符最常见的形式。</p>
+<p>URL描述了一台特定服务器上某个资源的特定位置。它们可以明确说明如何从一个精确、固定的位置获取资源。</p>
+<p>大部分URL都遵循一种标准格式，这种格式包含三个部分：</p>
+<ul>
+<li>URL的第一部分被称为方案（scheme），说明了访问资源所使用的协议类型。这部分通常是HTTP协议（http://）</li>
+<li>第二部分给出了服务器的因特网地址</li>
+<li>其余部分指定了Web服务器上的某个资源</li>
+</ul>
+<h3 id="URN"><a href="#URN" class="headerlink" title="URN"></a>URN</h3><p>URI的第二种形式就是统一资源名（URN）。</p>
+<p>URN作为特定内容的唯一名称使用的，与目前的资源所在地无关。</p>
+<p>URN仍处于试验阶段，还未大范围使用。</p>
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p>一个HTTP事务由一条（从客户端发往服务器的）请求命令和一个（从服务器发回客户端的）响应结果组成。</p>
+<p>这种通信时通过名为HTTP报文（HTTP message）的格式化数据块进行的。</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>HTTP方法（HTTP method），每条HTTP请求报文都包含一个方法。</p>
+<p>这个方法会告诉服务器要执行什么动作。</p>
+<p>一些常见的HTTP方法：</p>
+<ul>
+<li>GET    从服务器向客户端发送命名资源</li>
+<li>PUT    将来自客户端的数据存储到一个命名的服务器资源中去</li>
+<li>DELETE     从服务器中删除命名资源</li>
+<li>POST   将客户端数据发送到一个服务器网关应用程序</li>
+<li>HEAD   仅发送命名资源响应中的HTTP首部</li>
+</ul>
+<h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h3><p>每条HTTP响应报文返回时都会携带一个状态码。</p>
+<p>状态码是一个三位数字的代码，告知客户端请求是否成功，或者是否需要采取其他动作。</p>
+<p>一些常见的HTTP状态码：</p>
+<ul>
+<li>200    OK，文档正确返回</li>
+<li>302    Redirect（重定向）到其他地方去获取资源</li>
+<li>404    Not Found（没找到）无法找到这个资源</li>
+</ul>
+<p>伴随着每个数字状态码，HTTP还会发送一条解释性的原因短语文本。</p>
+<p>HTTP软件处理下列状态码和原因短语的方式是一样的。</p>
+<h3 id="Web页面中可以包含多个对象"><a href="#Web页面中可以包含多个对象" class="headerlink" title="Web页面中可以包含多个对象"></a>Web页面中可以包含多个对象</h3><p>应用程序完成一项任务时，通常会发布多个HTTP事务。</p>
+<p>一个Web页面通常并不是单个资源，而是一组资源的集合。</p>
+<h2 id="报文"><a href="#报文" class="headerlink" title="报文"></a>报文</h2><p>HTTP报文是由一行一行的简单字符串组成的。</p>
+<p>HTTP报文都是纯文本，不是二进制代码，所以可以很方便地对其进行读写。</p>
+<p>从Web客户端发往Web服务器的HTTP报文称为请求报文（request message）。</p>
+<p>从服务器发往客户端的报文称为响应报文（response message），此外没有其他类型的HTTP报文了。</p>
+<p>HTTP报文包括三个部分：</p>
+<p><strong>起始行</strong></p>
+<p>报文的第一行就是起始行。</p>
+<p>在请求报文中用来说明要做些什么。</p>
+<p>在响应报文中说明出现了什么情况。</p>
+<p><strong>首部字段</strong></p>
+<p>起始行后面有零个或多个首部字段。</p>
+<p>每个首部字段都包含一个名字和一个值，两者之间使用冒号（:）来分割。</p>
+<p>首部以一个空行结束。</p>
+<p><strong>主体</strong></p>
+<p>空行之后就是可选的报文主体。其中包含了所有类型的数据。</p>
+<p>请求主体中包含了要发给Web服务器的数据。</p>
+<p>响应主体中装载了要返回给客户端的数据。</p>
+<p>起始行和首部都是文本形式且都是结构化的，而主体中可以包含文本在内的任意的二进制数据。</p>
+<p><img src="https://raw.githubusercontent.com/bynl-44/imageCloud/master/images/%E6%88%AA%E5%B1%8F2022-03-02%2016.15.32.png" alt="截屏2022-03-02 16.15.32" loading="lazy"></p>
+<p>图中，浏览器发送了一条HTTP请求报文。</p>
+<p>这条请求的起始行中有一个GET命令，且本地资源为/tools.html。</p>
+<p>这条请求说明它使用的是1.0版的HTTP协议。请求报文没有主体，因为从服务器上GET一个简单的文档不需要请求数据。</p>
+<p>服务器会回送一条HTTP响应报文。</p>
+<p>这条响应中包含了HTTP的版本号（HTTP/1.0）、一个成功状态码（200）、一个描述性的原因短语（OK），以及一块响应首部字段，在所有这些内容之后跟着包含了所请求文档的响应主体。</p>
+<p>Content-Length首部说明了响应主体的长度，Content-Type首部说明了文档的MIME类型。</p>
+<h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><p><strong>HTTP是个应用层协议。</strong></p>
+<p>HTTP把联网的细节都交给了通用、可靠的因特网传输协议TCP/IP。</p>
+<h3 id="TCP-IP"><a href="#TCP-IP" class="headerlink" title="TCP/IP"></a>TCP/IP</h3><p>TCP提供了：</p>
+<ul>
+<li>无差错的数据传输。</li>
+<li>按序传输（数据流总是会按照发送的顺序到达）。</li>
+<li>未分段的数据流（可以在任意时刻以任意尺寸将数据发送出去）。</li>
+</ul>
+<p>因特网自身就是基于TCP/IP的，TCP/IP是全世界的计算机和网络设备常用的层次化分组交换网络协议集。</p>
+<img src="https://raw.githubusercontent.com/bynl-44/imageCloud/master/images/%E6%88%AA%E5%B1%8F2022-03-02%2016.44.22.png" alt="截屏2022-03-02 16.44.22" / loading="lazy">
+
+<p>HTTP协议位于TCP的上层。HTTP使用TCP来传输其报文数据。与之类似，TCP则位于IP的上层。</p>
+<h3 id="连接、IP地址及端口号"><a href="#连接、IP地址及端口号" class="headerlink" title="连接、IP地址及端口号"></a>连接、IP地址及端口号</h3><p>在HTTP客户端向服务器发送报文之前，需要用网际协议（Internet Protocol, IP）地址和端口号在客户端和服务器之间建立一条TCP/IP连接。</p>
+<p>建立一条TCP连接的过程与给公司办公室的某个人打电话的过程类似。首先，要拨打公司的电话号码。这样就能进入正确的机构了。其次，拨打要联系的那个人的分机号。</p>
+<p>在TCP中，你需要知道服务器的IP地址，以及与服务器上运行的特定软件相关的TCP端口号。</p>
+<p>URL存储了资源机器的IP地址和端口号。当URL中没有端口号时，可以假设默认端口号是80。</p>
+<p>基本的浏览器连接处理：</p>
+<ol>
+<li>浏览器从URL中解析出服务器主机名；</li>
+<li>浏览器将服务器主机名转换成服务器的IP地址；</li>
+<li>浏览器将端口号（如果有的话）从URL中解析出来；</li>
+<li>浏览器建立一条与Web服务器的TCP连接；</li>
+<li>浏览器向服务器发送一条HTTP请求报文；</li>
+<li>服务器想浏览器回送一条HTTP响应报文；</li>
+<li>关闭连接，浏览器显示文档。</li>
+</ol>
+<h3 id="一个使用Telnet的实例"><a href="#一个使用Telnet的实例" class="headerlink" title="一个使用Telnet的实例"></a>一个使用Telnet的实例</h3><p>Telnet程序可以将键盘连接到某个目标TCP端口，并将此TCP端口的输出回送到显示屏上。</p>
+<p>Telnet常用于远程终端会话，但它几乎可以连接所有的TCP服务器，包括HTTP服务器。</p>
+<p>Telnet可以很好地模拟HTTP客户端，但不能作为服务器使用。</p>
+<h2 id="协议版本"><a href="#协议版本" class="headerlink" title="协议版本"></a>协议版本</h2><p><strong>HTTP/0.9</strong></p>
+<p>HTTP的1991原型版本称为HTTP/0.9。</p>
+<p>这个协议有很多严重的设计缺陷。HTTP/0.9只支持GET方法，不支持多媒体内容的MIME类型、各种HTTP首部，或者版本号。</p>
+<p>它很快就被HTTP/1.0取代了。</p>
+<p><strong>HTTP/1.0</strong></p>
+<p>1.0是第一个得到广泛使用的HTTP版本。</p>
+<p>HTTP/1.0添加了版本号、各种HTTP首部、一些额外的方法，以及对多媒体对象的处理。</p>
+<p>HTTP/1.0使得包含生动图片的Web页面和交互式表格成为可能，而这些页面和表格促使万维网为人们广泛地接受。</p>
+<p><strong>HTTP/1.0+</strong></p>
+<p>在20世纪90年代中叶，很多流行的Web客户端和服务器都在飞快地向HTTP中添加各种特性，以满足快速扩张且在商业上十分成功的万维网的需要。</p>
+<p>其中很多特性，包括持久的keep-alive连接、虚拟主机支持，以及代理连接支持都被加入到HTTP之中，并成为非官方的事实标准。</p>
+<p>这种非正式的HTTP扩展版本通常称为HTTP/1.0+。</p>
+<p><strong>HTTP/1.1</strong></p>
+<p>HTTP/1.1重点关注的是校正HTTP设计中的结构性缺陷，明确语义，引入重要的性能优化措施，并删除一些不好的特性。</p>
+<p>HTTP/1.1还包含了对20世纪90年代末正在发展中的更复杂的Web应用程序和部署方式的支持。</p>
+<p>HTTP/1.1是当前使用的HTTP版本。</p>
+<p><strong>HTTP/2.0</strong></p>
+<p>HTTP/2.0是HTTP/1.1后继结构的原型建议，它重点关注的是性能的大幅优化，以及更强大的服务逻辑远程执行框架。</p>
+<h2 id="Web的结构组件"><a href="#Web的结构组件" class="headerlink" title="Web的结构组件"></a>Web的结构组件</h2><p>在因特网上，要与很多Web应用程序进行交互。除了重点介绍了两个Web应用程序（Web浏览器和Web服务器）是如何相互发送报文来实现基本事务处理的。我们将列出其他一些比较重要的应用程序：</p>
+<p><strong>代理</strong></p>
+<p>位于客户端和服务器之间的HTTP中间实体。</p>
+<p><strong>缓存</strong></p>
+<p>HTTP的仓库，使常用页面的副本可以保存在离客户端更近的地方。</p>
+<p><strong>网关</strong></p>
+<p>连接其他应用程序的特殊Web服务器。</p>
+<p><strong>隧道</strong></p>
+<p> 对HTTP通信报文进行盲转发的特殊代理。</p>
+<p><strong>Agent代理</strong></p>
+<p>发起自动HTTP请求的半智能Web客户端。</p>
+<h3 id="代理"><a href="#代理" class="headerlink" title="代理"></a>代理</h3><p>HTTP代理服务器是Web安全、应用集成以及性能优化的重要组成模块。</p>
+<p>代理位于客户端和服务器之间，接收所有客户端的HTTP请求，并将这些请求转发给服务器（可能会对请求进行修改之后转发）。对用户来说，这些应用程序就是一个代理，代表用户访问服务器。</p>
+<p>出于安全考虑，通常会将代理作为转发所有Web流量的可信任中间节点使用。代理还可以对请求和响应进行过滤。</p>
+<h3 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h3><p>Web缓存（Web cache）或代理缓存（proxy cache）是一种特殊的HTTP代理服务器，可以将经过代理传送的常用文档复制保存起来。下一个请求同一文档的客户端就可以享受缓存的私有副本所提供的服务了。</p>
+<p>客户端从附近的缓存下载文档会比从远程Web服务器下载快得多。</p>
+<p>HTTP定义了很多功能，使得缓存更加高效，并规范了文档的新鲜度和缓存内容的隐私性。</p>
+<h3 id="网关"><a href="#网关" class="headerlink" title="网关"></a>网关</h3><p>网关（gateway）是一种特殊的服务器，作为其他服务器的中间实体使用。通常用于将HTTP流量转换成其他的协议。</p>
+<p>网关接受请求时就好像自己是资源的源端服务器一样。客户端可能并不知道自己正在与一个网关进行通信。</p>
+<h3 id="隧道"><a href="#隧道" class="headerlink" title="隧道"></a>隧道</h3><p>隧道（tunnel）是建立起来之后，就会在两条连接之间对原始数据进行盲转发的HTTP应用程序。</p>
+<p>HTTP隧道通常用来在一条或多条HTTP连接上转发非HTTP数据，转发时不会窥探数据。</p>
+<p>HTTP隧道的一种常见用途是通过HTTP连接承载加密的安全套接字层（SSL, Secure Sockets Layer）流量，这样SSL流量就可以穿过只允许Web流量通过的防火墙了。</p>
+<h3 id="Agent代理"><a href="#Agent代理" class="headerlink" title="Agent代理"></a>Agent代理</h3><p>用户Agent代理（或者简称为Agent代理）是代表用户发起HTTP请求的客户端程序。</p>
+<p>所有发布Web请求的应用程序都是HTTP Agent代理。</p>
+</div></section><ul class="post-copyright"><li class="post-copyright-author"><strong>本文作者：</strong>北苑南路44号</li><li class="post-copyright-link"><strong>本文链接：</strong><a href="https://uuqk.icu/posts/af3eed3c/" title="HTTP协议概述">https://uuqk.icu/posts/af3eed3c/</a></li><li class="post-copyright-license"><strong>版权声明：</strong>本博客所有文章除特别声明外，均默认采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0 "><svg class="icon"><use xlink:href="#icon-creative-commons-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-by-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-nc-line"></use></svg><svg class="icon"><use xlink:href="#icon-creative-commons-sa-line"></use></svg></a> 许可协议。</li></ul></article><div class="post-nav"><div class="post-nav-item"><a class="post-nav-prev" href="/posts/c2f8a261/" rel="prev" title="URL与资源"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-left-s-line"></use></svg><span class="post-nav-text">URL与资源</span></a></div><div class="post-nav-item"><a class="post-nav-next" href="/posts/b16755e8/" rel="next" title="TLS是什么"><span class="post-nav-text">TLS是什么</span><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-right-s-line"></use></svg></a></div></div></div><div class="hty-card" id="comment"><div id="valine-container"></div><script>Yun.utils.getScript("https://cdn.jsdelivr.net/npm/valine@latest/dist/Valine.min.js", () => {
+  const valineConfig = {"enable":true,"appId":"VMToh52EtpSqu3xroQrvlQIL-gzGzoHsz","appKey":"9MNU7Rgp0dGCXAnF8sjmi0Fu","placeholder":"Just go go","avatar":null,"pageSize":10,"visitor":false,"highlight":true,"recordIP":false,"enableQQ":true,"meta":["nick","mail","link"],"lang":"zh-cn","el":"#valine-container"}
+  valineConfig.path = "/posts/af3eed3c/"
+  new Valine(valineConfig)
+}, window.Valine);</script></div></main><footer class="sidebar-translate" id="footer"><div class="copyright"><span>&copy; 2021 – 2022 </span><span class="with-love" id="animate"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-cloud-line"></use></svg></span><span class="author"> 北苑南路44号</span></div><div class="powered"><span>由 <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 驱动 v5.4.1</span><span class="footer-separator">|</span><span>主题 - <a rel="noopener" href="https://github.com/YunYouJun/hexo-theme-yun" target="_blank"><span>Yun</span></a> v1.8.10</span></div><div class="live-time"><span>本博客已萌萌哒地运行</span><span id="display_live_time"></span><span class="moe-text">(●'◡'●)</span><script>function blog_live_time() {
+  setTimeout(blog_live_time, 1000);
+  const start = new Date('2021-05-29T00:00:00');
+  const now = new Date();
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const passDay = Math.floor(timeDiff / msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML = ` ${passDay} 天 ${passHour} 小时 ${passMinute} 分 ${passSecond} 秒`;
+}
+blog_live_time();
+</script></div></footer><a class="hty-icon-button" id="back-to-top" aria-label="back-to-top" href="#"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-arrow-up-s-line"></use></svg><svg class="progress-circle-container" viewBox="0 0 100 100"><circle class="progress-circle" id="progressCircle" cx="50" cy="50" r="48" fill="none" stroke="#5a1216" stroke-width="2" stroke-linecap="round"></circle></svg></a><a class="popup-trigger hty-icon-button icon-search" id="search" href="javascript:;" title="搜索"><span class="site-state-item-icon"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-search-line"></use></svg></span></a><script>window.addEventListener("DOMContentLoaded", () => {
+  // Handle and trigger popup window
+  document.querySelector(".popup-trigger").addEventListener("click", () => {
+    document.querySelector(".popup").classList.add("show");
+    setTimeout(() => {
+      document.querySelector(".search-input").focus();
+    }, 100);
+  });
+
+  // Monitor main search box
+  const onPopupClose = () => {
+    document.querySelector(".popup").classList.remove("show");
+  };
+
+  document.querySelector(".popup-btn-close").addEventListener("click", () => {
+    onPopupClose();
+  });
+
+  window.addEventListener("keyup", event => {
+    if (event.key === "Escape") {
+      onPopupClose();
+    }
+  });
+});
+</script><script src="/js/search/local-search.js" defer type="module"></script><div class="popup search-popup"><div class="search-header"><span class="popup-btn-close close-icon hty-icon-button"><svg class="icon" aria-hidden="true"><use xlink:href="#icon-close-line"></use></svg></span></div><div class="search-input-container"><input class="search-input" id="local-search-input" type="text" placeholder="搜索..." value=""></div><div id="local-search-result"></div></div><script>function initMourn() {
+  const date = new Date();
+  const today = (date.getMonth() + 1) + "-" + date.getDate()
+  const mourn_days = ["4-4","9-18"]
+  if (mourn_days.includes(today)) {
+    document.documentElement.style.filter = "grayscale(1)";
+  }
+}
+initMourn();</script></div></body></html>
