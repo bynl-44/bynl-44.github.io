@@ -41,12 +41,6 @@ jobs:
       - name: Verify build output
         run: ls -R ./dist
 
-      - name: 🪤 Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          force_orphan: true
       - name: Setup ssh key
         uses: webfactory/ssh-agent@v0.8.0
         with:
