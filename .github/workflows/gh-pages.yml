@@ -41,21 +41,31 @@ jobs:
       - name: Verify build output
         run: ls -R ./dist
 
-      - name: Setup ssh key
+      - name: Configure Git
         env:
-          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY}}
+          GITHUB_TOKEN: ${{ secrets.HEXO_DEPLOY_KEY}}
+          GIT_USER_NAME: 'bynl-44'
+          GIT_USER_EMAIL: 'xyxcnnh@aliyun.com'
         run: |
+          git config --global user.name "${GIT_USER_NAME}"
+          git config --global user.email "${GIT_USER_EMAIL}"
           mkdir -p ~/.ssh
-          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
+          echo "$GITHUB_TOKEN" > ~/.ssh/id_rsa
           chmod 700 ~/.ssh
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
-      - name: Deploy to GitHub Pages (with SSH)
+      - name: Commit
+        env:
+          GIT_URL: 'git@github.com:bynl-44/bynl-44.github.io.git'
         run: |
-          git config --global user.name "bynl-44"
-          git config --global user.email "xyxcnnh@aliyun.com"
-          git remote set-url origin "git@github.com:bynl-44/bynl-44.github.io.git"
+          cd dist
+          git init
+          git remote add origin "${GIT_URL}"
           git add .
           git commit -m "Deploy to GitHub Pages"
-          git push origin HEAD:gh-pages -f
+
+      - name: Push
+        run: |
+          cd  dist
+          git push origin HEAD:master --force
