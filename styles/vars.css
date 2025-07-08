@@ -1,0 +1,9 @@
+:root {
+    /*链接颜色*/
+    --va-c-link: #b8376f;
+
+    --card-c-primary: #f2a2c9;
+
+    --va-c-primary: #c30720;
+    --va-c-primary-lighter: #f2a2c9;
+}
