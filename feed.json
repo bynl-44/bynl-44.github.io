@@ -1,0 +1,45 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "北苑南路44号",
+  "home_page_url": "https://uuqi.icu/",
+  "feed_url": "https://uuqi.icu/feed.json",
+  "description": "北苑南路44号，一个有趣的地方。",
+  "icon": "https://uuqi.icu/images/avatar.jpg",
+  "favicon": "https://uuqi.icu/favicon.svg",
+  "authors": [
+    {
+      "name": "44号",
+      "url": "https://valaxy.site"
+    }
+  ],
+  "items": [
+    {
+      "id": "https://uuqi.icu/posts/git-usage-specification",
+      "url": "https://uuqi.icu/posts/git-usage-specification",
+      "title": "git使用规范",
+      "content_html": "<p><code>git</code>是个很强大的工具，每个人都有自己的使用习惯。但团队协作需要的是标准和规范，避免不必要的混乱。<br>\n杂乱的提交记录，很快就会让项目难以协调和维护。</p>\n<h3>开发一个功能</h3>\n<p>从主分支创建一个本地</p>\n<br/><p>访问 <a href=\"https://uuqi.icu/posts/git-usage-specification\" target=\"_blank\">https://uuqi.icu/posts/git-usage-specification</a> 阅读全文。</p>",
+      "date_published": "2025-07-08T17:48:25.000Z",
+      "date_modified": "2025-07-08T17:48:25.000Z",
+      "authors": [
+        {
+          "name": "44号",
+          "url": "https://valaxy.site"
+        }
+      ]
+    },
+    {
+      "id": "https://uuqi.icu/posts/hello-valaxy",
+      "url": "https://uuqi.icu/posts/hello-valaxy",
+      "title": "Hello, Valaxy!",
+      "content_html": "<p><strong>Welcome to <a href=\"https://valaxy.site/\">Valaxy</a>!</strong></p>\n<p>Github: [valaxy Github](<a href=\"https://github.com/YunYouJu\">https://github.com/YunYouJu</a></p>\n<br/><p>访问 <a href=\"https://uuqi.icu/posts/hello-valaxy\" target=\"_blank\">https://uuqi.icu/posts/hello-valaxy</a> 阅读全文。</p>",
+      "date_published": "2025-07-08T17:31:42.000Z",
+      "date_modified": "2025-07-08T17:31:42.000Z",
+      "authors": [
+        {
+          "name": "44号",
+          "url": "https://valaxy.site"
+        }
+      ]
+    }
+  ]
+}
