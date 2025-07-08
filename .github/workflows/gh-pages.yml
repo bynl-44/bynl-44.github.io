@@ -41,31 +41,9 @@ jobs:
       - name: Verify build output
         run: ls -R ./dist
 
-      - name: Configure Git
-        env:
-          GITHUB_TOKEN: ${{ secrets.HEXO_DEPLOY_KEY}}
-          GIT_USER_NAME: 'bynl-44'
-          GIT_USER_EMAIL: 'xyxcnnh@aliyun.com'
-        run: |
-          git config --global user.name "${GIT_USER_NAME}"
-          git config --global user.email "${GIT_USER_EMAIL}"
-          mkdir -p ~/.ssh
-          echo "$GITHUB_TOKEN" > ~/.ssh/id_rsa
-          chmod 700 ~/.ssh
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-
-      - name: Commit
-        env:
-          GIT_URL: 'git@github.com:bynl-44/bynl-44.github.io.git'
-        run: |
-          cd dist
-          git init
-          git remote add origin "${GIT_URL}"
-          git add .
-          git commit -m "Deploy to GitHub Pages"
-
-      - name: Push
-        run: |
-          cd  dist
-          git push origin HEAD:master --force
+      - name: 🚀 Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true
