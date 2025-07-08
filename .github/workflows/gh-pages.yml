@@ -52,8 +52,7 @@ jobs:
           ssh-keyscan github.com >> ~/.ssh/known_hosts
 
       - name: Deploy to GitHub Pages (with SSH)
-        run: |
-          git config --global user.name "bynl-44"
-          git config --global user.email "xxycnnh@aliyun.com"
-          git remote set-url origin git@github.com:bynl-44/bynl-44.github.io.git
-          git subtree push --prefix dist origin gh-pages --force
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: './dist'
+          force_orphan: true
