@@ -47,3 +47,14 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           force_orphan: true
+      - name: Setup ssh key
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to GitHub Pages (with SSH)
+        run: |
+          git config --global user.name "bynl-44"
+          git config --global user.email "xxycnnh@aliyun.com"
+          git remote set-url origin git@github.com:bynl-44/bynl-44.github.io.git
+          git subtree push --prefix dist origin gh-pages --force
